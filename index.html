@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <p class="header">SCORE</p>
+    <div class="score">
+     <p id="human-score">0</p>
+     <p id="change">PRESS ANY BUTTON</p>
+     <p id="computer-score">0</p>
+    </div>
+    <div class="container">
+     <button class="button" onclick="playRound(getHumanChoice(0), getComputerChoice())">ROCK🤜</button>
+     <button class="button" onclick="playRound(getHumanChoice(1), getComputerChoice())">PAPER🖐</button>
+     <button class="button" onclick="playRound(getHumanChoice(2), getComputerChoice())">SCISSORS✌</button>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
