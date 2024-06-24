@@ -15,27 +15,27 @@ function playRound(getHumanChoice, getComputerChoice) {
         humanChoice = getHumanChoice;
         computerChoice = getComputerChoice;
         if (humanChoice == 0 && computerChoice == 1 && playGame() == 1 ) {
+            document.getElementById("change").innerHTML = "COMPUTER CHOICE WAS PAPER🖐"
             document.getElementById("computer-score").innerHTML = ++computerScore;
-            alert("COMPUTER CHOICE WAS PAPER🖐")
-        } else if (humanChoice == 1 && computerChoice == 2 && playGame() == 1 ) {
-            document.getElementById("computer-score").innerHTML = ++computerScore;
-            alert("COMPUTER CHOICE WAS SCISSORS✌")
-        } else if (humanChoice == 2 && computerChoice == 0 && playGame() == 1 ) {
-            document.getElementById('computer-score').innerHTML = ++computerScore;
-            alert("COMPUTER CHOICE WAS ROCK🤜")
-        } else if (humanChoice == computerChoice && playGame() == 1 ) {
-            alert("DRAW")
         } else if (humanChoice == 1 && computerChoice == 0 && playGame() == 1 ) {
-            document.getElementById('human-score').innerHTML == ++humanScore;
-            alert("COMPUTER CHOICE ROCK🤜")
+            document.getElementById("change").innerHTML = "COMPUTER CHOICE ROCK🤜"
+            document.getElementById("human-score").innerHTML = ++humanScore;
+        } else if (humanChoice == 1 && computerChoice == 2 && playGame() == 1 ) {
+            document.getElementById("change").innerHTML = "COMPUTER CHOICE WAS SCISSORS✌"
+            document.getElementById("computer-score").innerHTML = ++computerScore;
         } else if (humanChoice == 2 && computerChoice == 1 && playGame() == 1 ) {
-            document.getElementById('human-score').innerHTML = ++humanScore;
-            alert("COMPUTER CHOICE WAS PAPER🖐")
+            document.getElementById("change").innerHTML = "COMPUTER CHOICE WAS PAPER🖐"
+            document.getElementById("human-score").innerHTML = ++humanScore;
+        } else if (humanChoice == 2 && computerChoice == 0 && playGame() == 1 ) {
+            document.getElementById("change").innerHTML = "COMPUTER CHOICE WAS ROCK🤜"
+            document.getElementById('computer-score').innerHTML = ++computerScore;
         } else if (humanChoice == 0 && computerChoice == 2 && playGame() == 1 ) {
-            document.getElementById('human-score').innerHTML = ++humanScore;
-            alert("COMPUTER CHOICE WAS SCISSORS✌")
+            document.getElementById("change").innerHTML = "COMPUTER CHOICE WAS SCISSORS✌"
+            document.getElementById("human-score").innerHTML = ++humanScore;
+        } else if (humanChoice == computerChoice && playGame() == 1 ) {
+            document.getElementById("change").innerHTML = "PRESS ANY BUTTON - DRAW"
         } else {
-            alert("GAME OVER!")
+            document.getElementById("change").innerHTML = "GAME OVER!"
         }
         playGame()
 }
